@@ -9,8 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    //MARK:- PROPERTIES
+    
+    var honeymoons : [Destination] = honeymoonData
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        
+        ScrollView(.horizontal, showsIndicators: true) {
+            HStack{
+                ForEach(honeymoons) { item in
+                    CardView(honeymoon: item)
+                }
+            }
+        }
     }
 }
 
