@@ -17,12 +17,25 @@ struct ContentView: View {
     var body: some View {
         
         
-        ScrollView(.horizontal, showsIndicators: true) {
-            HStack{
-                ForEach(honeymoons) { item in
-                    CardView(honeymoon: item)
-                }
-            }
+        VStack {
+            
+            HeaderView()
+            
+            Spacer()
+            
+            CardView(honeymoon: honeymoons[2]).padding()
+            
+//            ScrollView(.horizontal, showsIndicators: true) {
+//                HStack{
+//                    ForEach(honeymoons) { item in
+//                        CardView(honeymoon: item)
+//                    }
+//                }
+//                } .padding()
+            
+            Spacer()
+            
+            FooterView()
         }
     }
 }

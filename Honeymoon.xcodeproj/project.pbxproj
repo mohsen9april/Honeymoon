@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED6912512541E3F0007E6BAD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6912502541E3F0007E6BAD /* HeaderView.swift */; };
+		ED6912532541E87F007E6BAD /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6912522541E87F007E6BAD /* FooterView.swift */; };
 		ED7151DE253F858B00F189BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7151DD253F858B00F189BD /* AppDelegate.swift */; };
 		ED7151E0253F858B00F189BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7151DF253F858B00F189BD /* SceneDelegate.swift */; };
 		ED7151E2253F858B00F189BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7151E1253F858B00F189BD /* ContentView.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED6912502541E3F0007E6BAD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		ED6912522541E87F007E6BAD /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		ED7151DA253F858B00F189BD /* Honeymoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Honeymoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7151DD253F858B00F189BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED7151DF253F858B00F189BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				ED7151F9253F8DC800F189BD /* CardView.swift */,
+				ED6912502541E3F0007E6BAD /* HeaderView.swift */,
+				ED6912522541E87F007E6BAD /* FooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,7 +194,9 @@
 				ED7151E0253F858B00F189BD /* SceneDelegate.swift in Sources */,
 				ED7151F7253F8D0C00F189BD /* HoneymoonData.swift in Sources */,
 				ED7151FA253F8DC800F189BD /* CardView.swift in Sources */,
+				ED6912532541E87F007E6BAD /* FooterView.swift in Sources */,
 				ED7151E2253F858B00F189BD /* ContentView.swift in Sources */,
+				ED6912512541E3F0007E6BAD /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
