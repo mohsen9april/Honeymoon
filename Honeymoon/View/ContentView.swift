@@ -13,10 +13,10 @@ struct ContentView: View {
     //MARK:- PROPERTIES
     
     var honeymoons : [Destination] = honeymoonData
-    
+    @State var showAlert : Bool = false
+
     var body: some View {
-        
-        
+
         VStack {
             
             HeaderView()
@@ -35,7 +35,12 @@ struct ContentView: View {
             
             Spacer()
             
-            FooterView()
+            FooterView(showBookingAlert: $showAlert)
+        }.alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Success"),
+                message: Text("wishing a lovely and most precious of the times together for the amazing couple"),
+                dismissButton: .default(Text("Happy Honeymoon")))
         }
     }
 }
