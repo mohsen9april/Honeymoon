@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct GuideView: View {
+    //MARK: - PROPERTIES
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20){
@@ -51,7 +55,8 @@ struct GuideView: View {
                 
                 Button(action: {
                     //Action
-                    print("A Button was tapped!")
+//                    print("A Button was tapped!")
+                    self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Continue".uppercased())
                         .font(.headline)

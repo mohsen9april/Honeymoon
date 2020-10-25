@@ -14,12 +14,13 @@ struct ContentView: View {
     
     var honeymoons : [Destination] = honeymoonData
     @State var showAlert : Bool = false
+    @State var showGuidView: Bool = false
 
     var body: some View {
 
         VStack {
             
-            HeaderView()
+            HeaderView(showGuideView: $showGuidView)
             
             Spacer()
             
