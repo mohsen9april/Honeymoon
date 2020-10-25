@@ -15,24 +15,17 @@ struct ContentView: View {
     var honeymoons : [Destination] = honeymoonData
     @State var showAlert : Bool = false
     @State var showGuidView: Bool = false
+    @State var showInfoView : Bool = false
 
     var body: some View {
 
         VStack {
             
-            HeaderView(showGuideView: $showGuidView)
+            HeaderView(showGuideView: $showGuidView, showInfoView: $showInfoView)
             
             Spacer()
             
             CardView(honeymoon: honeymoons[2]).padding()
-            
-//            ScrollView(.horizontal, showsIndicators: true) {
-//                HStack{
-//                    ForEach(honeymoons) { item in
-//                        CardView(honeymoon: item)
-//                    }
-//                }
-//                } .padding()
             
             Spacer()
             

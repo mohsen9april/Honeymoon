@@ -13,18 +13,21 @@ struct HeaderView: View {
     //MARK:- PROPERTIES
     
     @Binding var showGuideView : Bool
+    @Binding var showInfoView : Bool
     
     var body: some View {
         HStack{
             Button(action: {
                 //Action
-                print("Information")
-                
+                //print("Information")
+                self.showInfoView.toggle()
             }) {
                 Image(systemName: "info.circle")
                     .font(.system(size: 24, weight: .regular))
             }.accentColor(Color.primary)
-            
+                .sheet(isPresented: $showInfoView) {
+                    InfoView()
+            }
             
             Spacer()
             
@@ -32,7 +35,6 @@ struct HeaderView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(height: 28)
-            
             
             Spacer()
             
@@ -47,18 +49,14 @@ struct HeaderView: View {
                 .sheet(isPresented: $showGuideView) {
                     GuideView()
             }
-            
-            
         }.padding()
     }
 }
 
 struct HeaderView_Previews: PreviewProvider {
     
-    //    @State static var showGuide : Bool = false
-    
     static var previews: some View {
-        HeaderView(showGuideView: .constant(false))
+        HeaderView(showGuideView: .constant(false), showInfoView: .constant(false))
             .previewLayout(.fixed(width: 375, height: 80))
     }
 }
